@@ -1,10 +1,10 @@
-# Your custom Twilio Flex Plugin
+# Leo's Flex Plugin
 
 Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
 
 ## Setup
 
-Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node). Afterwards, install the dependencies by running `npm install`:
+Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node), up to version 16 (Node 18 is not supported). Afterwards, install the dependencies by running `npm install`:
 
 ```bash
 cd 
@@ -12,6 +12,8 @@ cd
 # If you use npm
 npm install
 ```
+
+For some reason, Yarn package resolution adds something in the plugin that breaks the UI. 
 
 Next, please install the [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart) by running:
 
@@ -27,5 +29,14 @@ twilio plugins:install @twilio-labs/plugin-flex
 
 ## Development
 
+To see it working locally, use the command:
+
+```
+twilio flex:plugins:start
+```
+
 Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
 
+### Updating dependencies
+
+This plugin relies on React 17 for now. 
