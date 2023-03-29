@@ -6,6 +6,7 @@
     "postinstall": "flex-plugin pre-script-check"
   },
   "dependencies": {
+    "@segment/analytics-next": "^1.51.3",
     "@twilio/flex-plugin-scripts": "6.0.4",
     "react": "^17",
     "react-dom": "^17",
