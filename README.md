@@ -40,3 +40,17 @@ Run `twilio flex:plugins --help` to see all the commands we currently support. F
 ### Updating dependencies
 
 This plugin relies on React 17 for now. 
+
+## Deployment
+
+Updating the plugin command:
+
+```
+twilio flex:plugins:deploy --major --changelog "My modification" --description "Leo's Plugin on Flex"
+```
+
+Releasing the plugin:
+
+```
+twilio flex:plugins:release --name "Plugin Release" --description "Enabling Leo's Plugin" --plugin leo-flex-plugin@1.0.0
+```

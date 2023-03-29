@@ -18,7 +18,12 @@ export default class SamplePlugin extends FlexPlugin {
    * @param flex { typeof Flex }
    */
   async init(flex: typeof Flex, manager: Flex.Manager): Promise<void> {
-    const options: Flex.ContentFragmentProps = { sortOrder: -1 };
-    flex.AgentDesktopView.Panel1.Content.add(<CustomTaskList key="SamplePlugin-component" />, options);
+    /* const options: Flex.ContentFragmentProps = { sortOrder: -1 };
+    flex.AgentDesktopView.Panel1.Content.add(<CustomTaskList key="SamplePlugin-component" />, options); */
+    flex.CRMContainer.defaultProps.uriCallback = (task) => {
+      return task
+        ? `https://www.bing.com/search?q=${task.attributes.name}`
+        : "https://www.bing.com"
+    }
   }
 }
