@@ -12,7 +12,7 @@ export default class SamplePlugin extends FlexPlugin {
 
   constructor() {
     super(PLUGIN_NAME);
-    this.analytics = AnalyticsBrowser.load({ writeKey: '7tl0pCxGRB84BDywXBYx9j3xft9e6EVb', cdnURL: process.env.NEXT_PUBLIC_SEGMENT_CDN || 'https://cdn.segment.com' });
+    this.analytics = AnalyticsBrowser.load({ writeKey: String(process.env.FLEX_SEGMENT_WRITE_KEY), cdnURL: process.env.NEXT_PUBLIC_SEGMENT_CDN || 'https://cdn.segment.com' });
   }
 
   /**
