@@ -3,7 +3,7 @@ import { create, act} from 'react-test-renderer';
 import { Text } from '@twilio-paste/core/text';
 import { Alert } from '@twilio-paste/core/alert';
 
-import CustomTaskList from '../CustomTaskList/CustomTaskList';
+import CustomTaskList from '../CustomTaskList';
 
 describe('CustomTaskList', () => {
     it('should load and display dismissable component', () => {

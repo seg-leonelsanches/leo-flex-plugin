@@ -1,6 +1,8 @@
 # Leo's Flex Plugin
 
-Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+This is a plugin I developed to learn Flex, and how we can easily integrate Flex with Segment.
+
+Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out the [Flex documentation](https://www.twilio.com/docs/flex).
 
 ## Setup
 
@@ -39,7 +41,7 @@ Run `twilio flex:plugins --help` to see all the commands we currently support. F
 
 ### Updating dependencies
 
-This plugin relies on React 17 for now. 
+This plugin relies on React 17 for now. On March 29th 2023, it's the most recent version that Flex supports.
 
 ## Deployment
 
@@ -52,5 +54,5 @@ twilio flex:plugins:deploy --major --changelog "My modification" --description "
 Releasing the plugin:
 
 ```
-twilio flex:plugins:release --name "Plugin Release" --description "Enabling Leo's Plugin" --plugin leo-flex-plugin@1.0.0
+twilio flex:plugins:release --name "Plugin Release" --description "Enabling Leo's Plugin" --plugin leo-flex-plugin@1.0.0 --profile=ProdProfileName
 ```

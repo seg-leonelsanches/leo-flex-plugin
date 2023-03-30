@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
+import { AnalyticsBrowser } from '@segment/analytics-next';
+
 import { Alert } from '@twilio-paste/core/alert';
 import { Theme } from '@twilio-paste/core/theme';
 import { Text } from '@twilio-paste/core/text';
-import { AnalyticsBrowser } from '@segment/analytics-next';
 
 export interface ICustomTaskListProps {
   analytics: AnalyticsBrowser;
 }
 
-const CustomTaskList = (props: ICustomTaskListProps): JSX.Element | null => {
+export const CustomTaskList = (props: ICustomTaskListProps): JSX.Element | null => {
   const [isOpen, setIsOpen] = useState(true);
   if (!isOpen) {
     return null;
@@ -30,5 +31,3 @@ const CustomTaskList = (props: ICustomTaskListProps): JSX.Element | null => {
 };
 
 CustomTaskList.displayName = 'foo';
-
-export default CustomTaskList;

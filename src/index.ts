@@ -1,5 +1,5 @@
 import * as FlexPlugin from '@twilio/flex-plugin';
 
-import SamplePlugin from './SamplePlugin';
+import LeoFlexPlugin from './LeoFlexPlugin';
 
-FlexPlugin.loadPlugin(SamplePlugin);
+FlexPlugin.loadPlugin(LeoFlexPlugin);
