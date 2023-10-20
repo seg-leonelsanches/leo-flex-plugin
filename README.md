@@ -45,7 +45,7 @@ This plugin relies on React 17 for now. On March 29th 2023, it's the most recent
 
 ## Deployment
 
-Updating the plugin command:
+Updating the plugin command (deploy):
 
 ```
 twilio flex:plugins:deploy --major --changelog "My modification" --description "Leo's Plugin on Flex"
@@ -55,4 +55,26 @@ Releasing the plugin:
 
 ```
 twilio flex:plugins:release --name "Plugin Release" --description "Enabling Leo's Plugin" --plugin leo-flex-plugin@1.0.0 --profile=ProdProfileName
+```
+
+## Troubleshooting
+
+### `Error: error:0308010C:digital envelope routines::unsupported` after `twilio flex:plugins:start` command
+
+This is a known issue with Node 18. This plugin was written with Node 16, and it works normally with Node 18, with the OpenSSL legacy provider. To fix it, run the following command:
+
+```sh
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+Or, in Windows:
+
+```powershell
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+Or:
+
+```
+set NODE_OPTIONS=--openssl-legacy-provider
 ```
